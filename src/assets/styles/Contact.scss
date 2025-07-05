@@ -1,0 +1,96 @@
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.contact-form {
+  padding-top: 20px;
+
+  // ✅ Light mode input text
+  .MuiInputBase-input {
+    color: #000 !important;
+  }
+
+  // ✅ Light mode label
+  .MuiInputLabel-root {
+    color: #000 !important;
+  }
+
+  // ✅ Light mode border
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #000 !important;
+  }
+
+  fieldset {
+    background: transparent !important; // prevent block
+  }
+
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+  }
+
+  button:hover {
+    background-color: #5000ca;
+    color: white;
+  }
+}
+
+// ✅ Works if you have <body class="dark-mode">
+.dark-mode .contact-form {
+  .MuiInputBase-input {
+    color: #fff !important;
+  }
+
+  .MuiInputLabel-root {
+    color: #fff !important;
+  }
+
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #fff !important;
+  }
+
+  fieldset {
+    background: transparent !important;
+  }
+
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+  }
+
+  button:hover {
+    background-color: #5000ca;
+    color: white;
+  }
+}
+
+label {
+  font-size: 1.2rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.form-flex .MuiFormControl-root {
+  width: 100%;
+}
+
+form {
+  width: 100% !important;
+}
+
+.body-form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+
+
