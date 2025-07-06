@@ -70,26 +70,58 @@ function Navigation({ parentToChild, modeChange }: any) {
 
   const drawer = (
     <Box
-      className="navigation-bar-responsive"
+      className={`navigation-bar-responsive ${
+        mode === "dark" ? "dark-mode" : "light-mode"
+      }`}
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center" }}
     >
-      <p className="mobile-menu-top">
-        <ListIcon />
+      <p
+        className="mobile-menu-top"
+        style={{ color: mode === "dark" ? "white" : "#0d1116" }}
+      >
+        <ListIcon sx={{ color: mode === "dark" ? "white" : "#0d1116" }} />
         Menu
       </p>
-      <Divider />
+      <Divider
+        sx={{
+          borderColor:
+            mode === "dark"
+              ? "rgba(255, 255, 255, 0.12)"
+              : "rgba(0, 0, 0, 0.12)",
+        }}
+      />
       <List>
         <ListItem disablePadding>
-          <ListItemButton sx={{ textAlign: "center" }} onClick={downloadResume}>
-            <DownloadIcon sx={{ mr: 1 }} />
+          <ListItemButton
+            sx={{
+              textAlign: "center",
+              color: mode === "dark" ? "white" : "#0d1116",
+              "& .MuiListItemText-primary": {
+                color: mode === "dark" ? "white" : "#0d1116",
+              },
+            }}
+            onClick={downloadResume}
+          >
+            <DownloadIcon
+              sx={{
+                mr: 1,
+                color: mode === "dark" ? "white" : "#0d1116",
+              }}
+            />
             <ListItemText primary="Download Resume" />
           </ListItemButton>
         </ListItem>
         {navItems.map((item) => (
           <ListItem key={item[0]} disablePadding>
             <ListItemButton
-              sx={{ textAlign: "center" }}
+              sx={{
+                textAlign: "center",
+                color: mode === "dark" ? "white" : "#0d1116",
+                "& .MuiListItemText-primary": {
+                  color: mode === "dark" ? "white" : "#0d1116",
+                },
+              }}
               onClick={() => scrollToSection(item[1])}
             >
               <ListItemText primary={item[0]} />
@@ -156,6 +188,23 @@ function Navigation({ parentToChild, modeChange }: any) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: mode === "dark" ? "#0d1116" : "#f8f9fa",
+              "& .MuiListItemText-primary": {
+                color:
+                  mode === "dark" ? "white !important" : "#0d1116 !important",
+              },
+              "& .MuiListItemButton-root": {
+                color:
+                  mode === "dark" ? "white !important" : "#0d1116 !important",
+              },
+              "& .MuiListItemText-root": {
+                color:
+                  mode === "dark" ? "white !important" : "#0d1116 !important",
+              },
+              "& svg": {
+                color:
+                  mode === "dark" ? "white !important" : "#0d1116 !important",
+              },
             },
           }}
         >
