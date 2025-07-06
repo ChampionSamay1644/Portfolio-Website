@@ -54,7 +54,7 @@ function Project() {
 
         <div className="project">
           <a
-            href="https://placeholder-link.com/emotion-predictor"
+            href="https://github.com/ChampionSamay1644/Emotion-Predictor/tree/Samay"
             target="_blank"
             rel="noreferrer"
           >
@@ -67,7 +67,7 @@ function Project() {
             />
           </a>
           <a
-            href="https://placeholder-link.com/emotion-predictor"
+            href="https://github.com/ChampionSamay1644/Emotion-Predictor/tree/Samay"
             target="_blank"
             rel="noreferrer"
           >
@@ -81,14 +81,14 @@ function Project() {
 
         <div className="project">
           <a
-            href="https://placeholder-link.com/e-hr"
+            href="https://github.com/ChampionSamay1644/Enhanced-E-HR-Management-System"
             target="_blank"
             rel="noreferrer"
           >
             <img src={hr} className="zoom" alt="thumbnail" width="100%" />
           </a>
           <a
-            href="https://placeholder-link.com/e-hr"
+            href="https://github.com/ChampionSamay1644/Enhanced-E-HR-Management-System"
             target="_blank"
             rel="noreferrer"
           >
@@ -102,7 +102,7 @@ function Project() {
 
         <div className="project">
           <a
-            href="https://placeholder-link.com/hand-cricket"
+            href="https://github.com/ChampionSamay1644/HandCricket-MiniProject"
             target="_blank"
             rel="noreferrer"
           >
@@ -114,7 +114,7 @@ function Project() {
             />
           </a>
           <a
-            href="https://placeholder-link.com/hand-cricket"
+            href="https://github.com/ChampionSamay1644/HandCricket-MiniProject"
             target="_blank"
             rel="noreferrer"
           >
@@ -129,7 +129,7 @@ function Project() {
 
         <div className="project">
           <a
-            href="https://placeholder-link.com/flappy-bird"
+            href="https://github.com/ChampionSamay1644/flappybirdcopy"
             target="_blank"
             rel="noreferrer"
           >
@@ -141,7 +141,7 @@ function Project() {
             />
           </a>
           <a
-            href="https://placeholder-link.com/flappy-bird"
+            href="https://github.com/ChampionSamay1644/flappybirdcopy"
             target="_blank"
             rel="noreferrer"
           >
