@@ -5,7 +5,45 @@ import hr from "../assets/images/hr.png";
 import handcricket from "../assets/images/handcricket.png";
 import flappybird from "../assets/images/flappybird.png";
 import mock16 from "../assets/images/mock16.png";
+import Chip from "@mui/material/Chip";
 import "../assets/styles/Project.scss";
+
+// Skills for each project
+const dataDashSkills = [
+  "Python",
+  "Java",
+  "XML",
+  "Android OS",
+  "Cryptography",
+];
+const emotionPredictorSkills = [
+  "Python",
+  "OpenCV",
+  "Machine Learning",
+  "Computer Vision",
+  "TensorFlow",
+];
+const hrManagementSkills = [
+  "Python",
+  "Tkinter",
+  "Firebase",
+  "CRUD Operations",
+  "Database",
+];
+const handCricketSkills = [
+  "Java",
+  "Android Studio",
+  "XML",
+  "Mobile Development",
+  "Game Logic",
+];
+const flappyBirdSkills = [
+  "Java",
+  "Swing",
+  "JFrame",
+  "Game Development",
+  "Event Handling",
+];
 
 function Project() {
   return (
@@ -50,6 +88,12 @@ function Project() {
             processing, visualization, and reporting using Python, Pandas, and
             Streamlit.
           </p>
+          <div className="flex-chips">
+            <span className="chip-title">Tech stack:</span>
+            {dataDashSkills.map((label, index) => (
+              <Chip key={index} className="chip" label={label} />
+            ))}
+          </div>
         </div>
 
         <div className="project">
@@ -77,6 +121,12 @@ function Project() {
             Trained a model to predict seven emotion categories using OpenCV.
             Supports image, video, and live video emotion detection.
           </p>
+          <div className="flex-chips">
+            <span className="chip-title">Tech stack:</span>
+            {emotionPredictorSkills.map((label, index) => (
+              <Chip key={index} className="chip" label={label} />
+            ))}
+          </div>
         </div>
 
         <div className="project">
@@ -98,6 +148,12 @@ function Project() {
             Built a basic HR management system in Python using Tkinter and
             Firebase to learn CRUD operations and database integration.
           </p>
+          <div className="flex-chips">
+            <span className="chip-title">Tech stack:</span>
+            {hrManagementSkills.map((label, index) => (
+              <Chip key={index} className="chip" label={label} />
+            ))}
+          </div>
         </div>
 
         <div className="project">
@@ -125,6 +181,12 @@ function Project() {
             XML. Practiced game logic, UI design, and user interaction with
             Android Studio.
           </p>
+          <div className="flex-chips">
+            <span className="chip-title">Tech stack:</span>
+            {handCricketSkills.map((label, index) => (
+              <Chip key={index} className="chip" label={label} />
+            ))}
+          </div>
         </div>
 
         <div className="project">
@@ -153,6 +215,12 @@ function Project() {
             handling, game loops, and basic UI logic while improving hand-eye
             coordination and perseverance for young players.
           </p>
+          <div className="flex-chips">
+            <span className="chip-title">Tech stack:</span>
+            {flappyBirdSkills.map((label, index) => (
+              <Chip key={index} className="chip" label={label} />
+            ))}
+          </div>
         </div>
 
         {/* <div className="project">

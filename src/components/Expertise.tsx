@@ -14,10 +14,9 @@ const labelsFirst = [
   "Java",
   "Python",
   "C++",
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "React",
+  // "CSS3",
+  // "JavaScript",
+  // "React",
   "Firebase",
   "SQL",
   "NoSQL",
@@ -31,13 +30,13 @@ const labelsSecond = [
   "Pandas",
   "Selenium",
   "Ultralytics",
-  "Scikit-learn",
-  "LangChain",
+  // "Scikit-learn",
+  // "LangChain",
   "Hugging Face",
-  "Recommendation Systems",
+  // "Recommendation Systems",
   "Web Scraping",
   "Model Training",
-  "Data Optimization",
+  // "Data Optimization",
 ];
 
 const labelsThird = [
@@ -49,8 +48,8 @@ const labelsThird = [
   "Docker",
   "CI/CD",
   "GitHub Actions",
-  "VM Management",
-  "Automation",
+  // "VM Management",
+  // "Automation",
   "DevOps",
 ];
 
