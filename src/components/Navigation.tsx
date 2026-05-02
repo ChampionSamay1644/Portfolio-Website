@@ -65,10 +65,7 @@ function Navigation({ parentToChild, modeChange }: any) {
     }
   };
 
-  // Option 2: Open in new tab
-  const downloadResume = () => {
-    window.open("/resume.pdf", "_blank");
-  };
+  // Native anchor tags are used below instead of window.open to prevent popup blockers on Vercel
 
   const drawer = (
     <Box
@@ -96,6 +93,10 @@ function Navigation({ parentToChild, modeChange }: any) {
       <List>
         <ListItem disablePadding>
           <ListItemButton
+            component="a"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
             sx={{
               textAlign: "center",
               color: mode === "dark" ? "white" : "#0d1116",
@@ -103,7 +104,6 @@ function Navigation({ parentToChild, modeChange }: any) {
                 color: mode === "dark" ? "white" : "#0d1116",
               },
             }}
-            onClick={downloadResume}
           >
             <DownloadIcon
               sx={{
@@ -159,7 +159,9 @@ function Navigation({ parentToChild, modeChange }: any) {
           )}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button
-              onClick={downloadResume}
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               sx={{ color: "#fff", mr: 2 }}
               startIcon={<DownloadIcon />}
             >
