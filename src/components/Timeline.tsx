@@ -29,7 +29,7 @@ function Timeline() {
             <h4 className="vertical-timeline-element-subtitle">
               Computer Engineering, K.C. College of Engineering, Thane
             </h4>
-            <p>Cybersecurity Honours Major | CGPA: 8.5</p>
+            <p>Cybersecurity Honours Major | CGPA: 8.6</p>
           </VerticalTimelineElement>
 
           <VerticalTimelineElement

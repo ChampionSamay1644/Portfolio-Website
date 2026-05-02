@@ -7,3 +7,5 @@ export { default as Experience } from "./Experience";
 export { default as Project } from "./Project";
 export { default as Contact } from "./Contact";
 export { default as TypewriterEffect } from "./TypewriterEffect";
+export { default as Achievements } from "./Achievements";
+export { default as Cybersecurity } from "./Cybersecurity";

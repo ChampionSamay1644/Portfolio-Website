@@ -1,18 +1,20 @@
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import SecurityIcon from "@mui/icons-material/Security";
 import TypewriterEffect from "./TypewriterEffect";
 import "../assets/styles/Main.scss";
 import pfp from "../assets/images/pfp.jpg";
 
 function Main() {
   const typewriterTexts = [
-    "Software Developer",
-    "Cloud & AI Enthusiast",
+    "Systems Engineer",
+    "AI & ML Developer",
     "Cybersecurity Researcher",
-    "Machine Learning Engineer",
+    "Embedded Systems Builder",
+    "Linux & Cloud Engineer",
     "Open Source Contributor",
-    "Linux User",
   ];
 
   return (
@@ -77,6 +79,7 @@ function Main() {
               championsamayp@gmail.com
             </a>
           </div>
+          <div className="hero-headline">Systems Engineer | AI &amp; Cybersecurity | Linux &amp; Cloud</div>
           <h2 className="typewriter-subtitle">
             <TypewriterEffect
               key="main-typewriter"
@@ -86,11 +89,25 @@ function Main() {
             />
           </h2>
           <p>
-            I'm a final-year Computer Engineering student graduating in 2026. I
-            enjoy building practical software, AI models, and cloud workflows on
-            Linux systems. I'm also pursuing a Cybersecurity Honours Major to
-            grow my skills in secure coding and ethical hacking.
+            Final-year Computer Engineering student building real-world systems
+            across AI, cybersecurity, and distributed software. Experienced in
+            developing scalable applications, ML pipelines, and security-focused
+            solutions on Linux-based environments.
           </p>
+          <div className="hero-achievements">
+            <span className="hero-badge hero-badge--gold">
+              <EmojiEventsIcon fontSize="small" />
+              Aavishkar Finalist – University of Mumbai
+            </span>
+            <span className="hero-badge hero-badge--cyber">
+              <SecurityIcon fontSize="small" />
+              Top 5 – RAIT CTF Finals
+            </span>
+            <span className="hero-badge hero-badge--gold">
+              <EmojiEventsIcon fontSize="small" />
+              2nd Prize – SCOE AVISHKAR 2026
+            </span>
+          </div>
         </div>
       </div>
     </div>

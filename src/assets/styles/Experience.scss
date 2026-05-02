@@ -1,33 +1,131 @@
 .experience-section {
-  padding: 3rem 1rem;
-  text-align: center;
+  padding: 4rem 8%;
+  text-align: left;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 
   h1 {
+    font-size: 2.5em;
+    font-family: "Inter", "Lato", sans-serif;
     margin-bottom: 2rem;
+    color: white;
+  }
+}
+
+.experience-card {
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  margin: 0 0 1.6rem;
+  border-left: 4px solid #7c3aed;
+  background: rgba(124, 58, 237, 0.06);
+  border-top: 1px solid rgba(124, 58, 237, 0.15);
+  border-right: 1px solid rgba(124, 58, 237, 0.1);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(124, 58, 237, 0.15);
+  }
+
+  .experience-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.3em;
+    font-family: "Inter", "Lato", sans-serif;
+    color: #a78bfa !important;
+  }
+
+  h4 {
+    margin: 0.3rem 0 0;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-weight: 500;
+    font-size: 0.95em;
+  }
+
+  .exp-tag {
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(167, 139, 250, 0.15);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    color: #a78bfa !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+}
+
+.experience-bullets {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.4rem;
+  list-style: disc;
+
+  li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95em;
+    line-height: 1.6;
+    opacity: 0.88;
+    color: white;
+  }
+}
+
+.exp-chips {
+  margin-top: 0.8rem;
+
+  .chip-title {
+    font-size: 0.85em !important;
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+// Light mode overrides
+.light-mode {
+  .experience-section h1 {
+    color: #0d1116;
   }
 
   .experience-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin: 1rem auto;
-    max-width: 800px;
-    text-align: left;
+    background: rgba(124, 58, 237, 0.04);
+    border-left-color: #7c3aed;
 
-    h2 {
-      margin: 0;
-      color: #5000ca;
+    h2 { color: #6d28d9 !important; }
+    h4 { color: #555 !important; }
+
+    .exp-tag {
+      background: rgba(109, 40, 217, 0.1);
+      border-color: rgba(109, 40, 217, 0.25);
+      color: #6d28d9 !important;
+    }
+  }
+
+  .experience-bullets li {
+    color: #374151;
+  }
+
+  .exp-chips .chip-title {
+    color: #555;
+  }
+}
+
+// Responsive
+@media screen {
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 5% 5%;
     }
 
-    h4 {
-      margin: 0.5rem 0;
-      color: #555;
-    }
-
-    p {
-      margin-top: 0.5rem;
-      color: #333;
+    .experience-card .experience-card-header {
+      flex-direction: column;
+      gap: 8px;
     }
   }
 }

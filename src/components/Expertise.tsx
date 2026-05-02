@@ -1,11 +1,11 @@
 import React from "react";
 import "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
 import {
   faLaptopCode,
   faBrain,
   faCloud,
+  faShield,
 } from "@fortawesome/free-solid-svg-icons";
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
@@ -14,29 +14,25 @@ const labelsFirst = [
   "Java",
   "Python",
   "C++",
-  // "CSS3",
-  // "JavaScript",
-  // "React",
+  "TypeScript",
+  "React",
   "Firebase",
   "SQL",
   "NoSQL",
   "Android Studio",
   "Git",
-  "GitHub",
 ];
 
 const labelsSecond = [
   "Python",
+  "TensorFlow",
+  "PyTorch",
   "Pandas",
   "Selenium",
-  "Ultralytics",
-  // "Scikit-learn",
-  // "LangChain",
+  "Ultralytics (YOLO)",
   "Hugging Face",
-  // "Recommendation Systems",
   "Web Scraping",
-  "Model Training",
-  // "Data Optimization",
+  "Recommendation Systems",
 ];
 
 const labelsThird = [
@@ -48,9 +44,20 @@ const labelsThird = [
   "Docker",
   "CI/CD",
   "GitHub Actions",
-  // "VM Management",
-  // "Automation",
+  "Raspberry Pi",
   "DevOps",
+];
+
+const labelsCyber = [
+  "Burp Suite",
+  "Wireshark",
+  "Nmap",
+  "GDB",
+  "Ghidra",
+  "Volatility",
+  "Metasploit",
+  "CTF Competitions",
+  "OSINT",
 ];
 
 function Expertise() {
@@ -61,13 +68,12 @@ function Expertise() {
         <div className="skills-grid">
           <div className="skill">
             <FontAwesomeIcon icon={faLaptopCode} size="3x" />
-            <h3>Software Developer</h3>
+            <h3>Software Development</h3>
             <p>
-              I’m a fourth-year Computer Engineering student graduating in 2026.
-              I love building practical and efficient software solutions, with
-              experience across web and mobile development. I’ve created
-              multiple cross-platform applications and enjoy working on both
-              frontend and backend systems.
+              Designed and developed cross-platform applications spanning mobile (Android),
+              desktop (Java/Python), and web (React/TypeScript). Built scalable backends
+              with Firebase and SQL/NoSQL databases. Experienced in full-stack workflows
+              with clean architecture and version-controlled deployments.
             </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -79,13 +85,12 @@ function Expertise() {
 
           <div className="skill">
             <FontAwesomeIcon icon={faBrain} size="3x" />
-            <h3>AI & ML Developer</h3>
+            <h3>AI &amp; Machine Learning</h3>
             <p>
-              I have strong experience designing and deploying multi-tiered AI
-              models. I’ve built recommendation systems, video similarity
-              models, and large-scale web scraping pipelines for training data.
-              I enjoy solving real-world problems through intelligent automation
-              and machine learning.
+              Built ML pipelines and multi-tier recommendation systems deployed on
+              GCP and Azure. Trained computer vision models (CNN, YOLO) for real-time
+              inference. Developed large-scale web scraping pipelines to generate
+              training datasets. Experienced in model optimization for CPU/GPU workloads.
             </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
@@ -97,17 +102,33 @@ function Expertise() {
 
           <div className="skill">
             <FontAwesomeIcon icon={faCloud} size="3x" />
-            <h3>Cloud & Automation</h3>
+            <h3>Cloud &amp; Systems Engineering</h3>
             <p>
-              I’m skilled at working with cloud platforms like Google Cloud,
-              Azure, and AWS. I’ve automated workflows on Linux-based systems,
-              set up CI/CD pipelines, and optimized training pipelines for CPU
-              and GPU workloads. I’m well-versed in Linux and use it daily for
-              development and deployment tasks.
+              Automated workflows using Linux shell scripting and cloud-native tools
+              across GCP, Azure, and AWS. Set up CI/CD pipelines with GitHub Actions
+              and containerized deployments with Docker. Developed embedded Linux
+              systems on Raspberry Pi for real-time IoT and robotics applications.
             </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsThird.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill skill--cyber">
+            <FontAwesomeIcon icon={faShield} size="3x" />
+            <h3>Cybersecurity</h3>
+            <p>
+              Pursuing a Cybersecurity Honours Major. Active CTF competitor — ranked
+              Top 5 at RAIT CTF Finals. Hands-on experience in web exploitation,
+              OSINT, reverse engineering, digital forensics, and network traffic
+              analysis. Applies secure coding practices to all software projects.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {labelsCyber.map((label, index) => (
                 <Chip key={index} className="chip" label={label} />
               ))}
             </div>
