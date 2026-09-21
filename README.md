@@ -1,12 +1,25 @@
-# Champion Samay — Portfolio Website
+# Samay Pandey - Portfolio
 
-This is my personal portfolio website, built with **React**, **TypeScript**, **SASS**, and **Material UI**.
+A responsive React and TypeScript portfolio for backend and automation engineer Samay Pandey.
 
-It showcases my projects, skills, and experience as a software developer.  
-There’s also a fully functional contact form that sends messages using **EmailJS**.
+## Highlights
+- Original light/dark design with saved theme preference
+- Responsive navigation and layouts
+- Keyboard-friendly landmarks, focus states and reduced-motion support
+- Public project showcase and downloadable resume
+- Validated contact form that prepares an email in the visitor's mail app
 
-**🔗 Live Website:** [https://championsamay.vercel.app/](https://championsamay.vercel.app/)
+## Local development
+```bash
+npm ci
+npm start
+```
 
----
+## Checks
+```bash
+npm test -- --watchAll=false
+npm run build
+npx tsc --noEmit
+```
 
-© 2025 Samay Pandey. All rights reserved.
+The form intentionally uses a `mailto:` handoff so it works without storing third-party API keys. It can later be connected to a serverless endpoint after deployment access is available.
