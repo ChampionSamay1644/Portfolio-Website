@@ -40,7 +40,7 @@ const capabilities = [
 function initialTheme(): Theme {
   const saved = window.localStorage.getItem("portfolio-theme");
   if (saved === "light" || saved === "dark") return saved;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return typeof window.matchMedia === "function" && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 function App() {
@@ -79,7 +79,7 @@ function App() {
         <a className="brand" href="#home" aria-label="Samay Pandey, home" onClick={closeMenu}>
           <span className="brand-mark">SP</span><span>Samay Pandey</span>
         </a>
-        <nav aria-label="Primary navigation" className={menuOpen ? "nav open" : "nav"}>
+        <nav id="primary-menu" aria-label="Primary navigation" className={menuOpen ? "nav open" : "nav"}>
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#about" onClick={closeMenu}>About</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
