@@ -86,3 +86,5 @@ footer { width:min(calc(100% - 40px),var(--max)); margin:0 auto; padding:42px 0 
 .hero .hero-console { animation-delay:.08s; }
 @keyframes enter-up { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
 @media (prefers-reduced-motion:reduce) { .hero .reveal { animation:none; } }
+/* Keep first-paint hiring information stable; interaction motion is reserved for controls, cards and scroll progress. */
+.hero .reveal,.hero .hero-console { animation:none; opacity:1; transform:none; }
