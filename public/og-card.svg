@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7757ff"/><stop offset="1" stop-color="#c8ff4f"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="#101510"/>
+  <circle cx="1050" cy="90" r="330" fill="url(#g)" opacity=".24"/>
+  <rect x="72" y="68" width="72" height="72" rx="20" fill="#c8ff4f" transform="rotate(-3 108 104)"/>
+  <text x="108" y="113" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="800" fill="#101510">SP</text>
+  <text x="72" y="255" font-family="Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-4" fill="#f4f6f1">Samay Pandey</text>
+  <text x="72" y="335" font-family="Arial,sans-serif" font-size="42" font-weight="700" fill="#9a82ff">Backend &amp; Automation Engineer</text>
+  <text x="72" y="425" font-family="Arial,sans-serif" font-size="28" fill="#aab5a7">Python · Linux · Docker · Nginx · Applied AI</text>
+  <text x="72" y="535" font-family="Arial,sans-serif" font-size="22" fill="#c8ff4f">Engineering the boring parts away.</text>
+</svg>

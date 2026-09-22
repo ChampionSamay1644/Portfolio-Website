@@ -3,3 +3,16 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+class MockIntersectionObserver {
+  readonly root = null;
+  readonly rootMargin = "0px";
+  readonly thresholds = [0];
+  observe = jest.fn();
+  unobserve = jest.fn();
+  disconnect = jest.fn();
+  takeRecords = jest.fn(() => []);
+}
+
+Object.defineProperty(window, "IntersectionObserver", { writable: true, value: MockIntersectionObserver });
+Object.defineProperty(global, "IntersectionObserver", { writable: true, value: MockIntersectionObserver });
