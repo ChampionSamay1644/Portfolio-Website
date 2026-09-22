@@ -35,3 +35,12 @@ test('contact form reports missing and invalid fields', () => {
   fireEvent.click(screen.getByRole('button', { name: /Prepare email/i }));
   expect(screen.getByRole('status')).toHaveTextContent('Please enter a valid email address.');
 });
+
+test('engineering principles use a seamless visual duplicate without repeating accessible content', () => {
+  render(<App />);
+  const principles = screen.getByRole('region', { name: /Engineering principles/i });
+  expect(principles.querySelector('.trust-track')).toBeInTheDocument();
+  expect(principles.querySelectorAll('.trust-group')).toHaveLength(2);
+  expect(principles.querySelectorAll('.trust-group[aria-hidden="true"]')).toHaveLength(1);
+  expect(screen.getAllByText('Useful over flashy')).toHaveLength(2);
+});

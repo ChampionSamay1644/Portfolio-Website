@@ -60,6 +60,8 @@ const capabilities = [
   { number: "04", title: "Applied AI", text: "AI-assisted development, open-source models and practical tools built around real workflows." },
 ];
 
+const principles = ["Useful over flashy", "Systems thinking", "Accessible by default", "Built to be maintained"];
+
 const navItems = [
   { id: "work", label: "Work" },
   { id: "approach", label: "Approach" },
@@ -243,7 +245,17 @@ function App() {
         </section>
 
         <section className="trust-bar" aria-label="Engineering principles">
-          <span>Useful over flashy</span><i>✦</i><span>Systems thinking</span><i>✦</i><span>Accessible by default</span><i>✦</i><span>Built to be maintained</span>
+          <div className="trust-track">
+            {[false, true].map(duplicate => (
+              <div className="trust-group" aria-hidden={duplicate || undefined} key={String(duplicate)}>
+                {principles.map(principle => (
+                  <React.Fragment key={principle}>
+                    <span>{principle}</span><i aria-hidden="true">✦</i>
+                  </React.Fragment>
+                ))}
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="section work" id="work">
